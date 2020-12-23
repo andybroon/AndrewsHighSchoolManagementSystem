@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndrewsHighSchoolManagementSystem", "AndrewsHighSchoolManagementSystem\AndrewsHighSchoolManagementSystem.csproj", "{B5B10461-F7F8-495B-8C5E-0EB110464086}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonDomain", "PersonDomain\PersonDomain.csproj", "{8C7960A0-1703-4910-84DB-5B8221C5ED20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonDomain", "PersonDomain\PersonDomain.csproj", "{8C7960A0-1703-4910-84DB-5B8221C5ED20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStore", "DataStore\DataStore.csproj", "{A062D19E-7842-4E51-8893-6EEEC0667F9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{15F252E4-2F85-40F0-B984-6232C1CB46CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{8C7960A0-1703-4910-84DB-5B8221C5ED20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C7960A0-1703-4910-84DB-5B8221C5ED20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C7960A0-1703-4910-84DB-5B8221C5ED20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A062D19E-7842-4E51-8893-6EEEC0667F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A062D19E-7842-4E51-8893-6EEEC0667F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A062D19E-7842-4E51-8893-6EEEC0667F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A062D19E-7842-4E51-8893-6EEEC0667F9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F252E4-2F85-40F0-B984-6232C1CB46CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F252E4-2F85-40F0-B984-6232C1CB46CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F252E4-2F85-40F0-B984-6232C1CB46CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F252E4-2F85-40F0-B984-6232C1CB46CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
