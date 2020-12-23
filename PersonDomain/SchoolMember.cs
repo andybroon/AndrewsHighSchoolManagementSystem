@@ -5,7 +5,7 @@ namespace PersonDomain
 {
     public abstract class SchoolMember : Person, ISchoolMember
     {
-        protected SchoolMember(IIdFactory idFactory, DateTime dateStarted) : base(idFactory)
+        protected SchoolMember(IIdFactory idFactory, DateTime dateStarted, DateTime dateOfBirth) : base(dateOfBirth, idFactory)
         {
             DateStarted = dateStarted;
         }

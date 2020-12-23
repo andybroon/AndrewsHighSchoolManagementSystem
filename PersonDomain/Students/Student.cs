@@ -5,8 +5,8 @@ namespace PersonDomain.Students
 {
     class Student : SchoolMember, IStudent
     {
-        public Student(DateTime dateStarted) 
-            : base(new StudentIdFactory(), dateStarted)
+        public Student(DateTime dateStarted, DateTime dateOfBirth) 
+            : base(new StudentIdFactory(), dateStarted, dateOfBirth)
         {
         }
 

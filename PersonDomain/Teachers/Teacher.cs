@@ -5,8 +5,8 @@ namespace PersonDomain.Teachers
 {
     public class Teacher : SchoolMember, ITeacher
     {
-        public Teacher(DateTime dateStarted) 
-            : base(new TeacherIdFactory(), dateStarted)
+        public Teacher(DateTime dateOfBirth, DateTime dateStarted) 
+            : base(new TeacherIdFactory(), dateStarted, dateOfBirth)
         {
         }
 

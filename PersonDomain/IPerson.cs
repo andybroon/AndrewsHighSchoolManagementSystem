@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace PersonDomain
 {
@@ -7,6 +8,7 @@ namespace PersonDomain
         string Id { get; }
         IEnumerable<string> GivenNames { get; set; }
         string Surname { get; set; }
+        DateTime DateOfBirth { get; }
         Address HomeAddress { get; set; }
         string PrimaryPhoneNumber { get; set; }
         string SecondaryPhoneNumber { get; set; }
