@@ -2,8 +2,9 @@
 
 namespace DataStore.Repositories
 {
-    public interface IPersonRepository : IRepository<IPerson>
+    public interface IPersonRepository<T> : IRepository<T> where T : IPerson
     {
-        IPerson Get(string id);
+        T GetById(string id);
+        void Update(T person);
     }
 }

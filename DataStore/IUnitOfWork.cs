@@ -5,6 +5,7 @@ namespace DataStore
 {
     public interface IUnitOfWork : IDisposable
     {
-        IPersonRepository PersonRepository { get; }
+        ITeacherRepository TeacherRepository { get; }
+        IStudentRepository StudentRepository { get; }
     }
 }
