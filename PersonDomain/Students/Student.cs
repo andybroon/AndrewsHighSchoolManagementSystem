@@ -1,5 +1,6 @@
 ﻿using System;
 using PersonDomain.PersonIdFactory;
+using SchoolDomain;
 
 namespace PersonDomain.Students
 {
@@ -10,8 +11,8 @@ namespace PersonDomain.Students
         {
         }
 
-        public string CurrentYear { get; }
-        public string Grade { get; }
+        public string CurrentYear => DateFinished.HasValue ? "Graduated" : $"(S{(int)((DateTime.Now - DateStarted).TotalDays/365)}";
+        public Grade Grade => StaticGradeCalculator.GetGrade(Gpa);
         public decimal Gpa { get; }
     }
 }

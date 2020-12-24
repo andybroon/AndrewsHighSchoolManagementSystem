@@ -1,5 +1,7 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using PersonDomain.PersonIdFactory;
+using Utility;
 
 namespace PersonDomain
 {
@@ -10,7 +12,12 @@ namespace PersonDomain
             DateStarted = dateStarted;
         }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = DateFormats.DateWithSlashes, ApplyFormatInEditMode = true)]
         public DateTime DateStarted { get; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = DateFormats.DateWithSlashes, ApplyFormatInEditMode = true)]
         public DateTime? DateFinished { get; set; }
     }
 }

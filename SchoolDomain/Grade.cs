@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SchoolDomain
+﻿namespace SchoolDomain
 {
     public enum Grade
     {
