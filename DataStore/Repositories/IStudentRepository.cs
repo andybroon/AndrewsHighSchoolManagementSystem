@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using DataStore.DataAccess;
 using PersonDomain.Students;
 using Utility;
 
@@ -13,15 +15,13 @@ namespace DataStore.Repositories
     {
         public event EventHandler<EventArgs<IEnumerable<IStudent>>> ItemsAdded;
         public event EventHandler<EventArgs<IEnumerable<IStudent>>> ItemsRemoved;
-        public event EventHandler Cleared;
 
-        private readonly ISchoolContext _context;
+        private readonly SchoolContext _context;
 
-        public StudentRepository(ISchoolContext context)
+        public StudentRepository(SchoolContext context)
         {
             _context = context;
         }
-
 
         public IEnumerable<IStudent> GetAll()
         {
@@ -35,22 +35,19 @@ namespace DataStore.Repositories
 
         public void AddRange(IEnumerable<IStudent> items)
         {
-            throw new NotImplementedException();
+            foreach (var student in items)
+                _context.Students.Add(student);
         }
 
         public void Remove(IStudent item)
         {
-            throw new NotImplementedException();
+            _context.Students.Remove(item);
         }
 
         public void RemoveRange(IEnumerable<IStudent> items)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Clear()
-        {
-            throw new NotImplementedException();
+            foreach (var student in items)
+                _context.Students.Remove(student);
         }
 
         public IStudent GetById(string id)
@@ -68,5 +65,14 @@ namespace DataStore.Repositories
             throw new NotImplementedException();
         }
 
+        protected virtual void OnItemsAdded(EventArgs<IEnumerable<IStudent>> e)
+        {
+            ItemsAdded?.Invoke(this, e);
+        }
+
+        protected virtual void OnItemsRemoved(EventArgs<IEnumerable<IStudent>> e)
+        {
+            ItemsRemoved?.Invoke(this, e);
+        }
     }
 }
